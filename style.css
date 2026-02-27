@@ -677,4 +677,25 @@ p {
         width: 55px;
         height: 55px;
     }
+
+}
+.section-light {
+    background: #ffffff;
+}
+
+.section-soft {
+    background: #f4f8ff;
+}
+:root {
+    --primary-color: #2d6cdf;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+.hero {
+    background: linear-gradient(135deg, #2d6cdf, #4a90e2);
+    color: white;
 }
