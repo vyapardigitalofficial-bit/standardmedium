@@ -129,4 +129,15 @@ function updateActiveNav() {
     });
 }
 
+
 window.addEventListener('scroll', updateActiveNav);
+const fadeElements = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+    fadeElements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
