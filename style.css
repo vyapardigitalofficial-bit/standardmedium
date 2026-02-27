@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #0f172a;
   color: #e2e8f0;
   line-height: 1.6;
@@ -72,12 +72,23 @@ body {
   overflow: hidden;
 }
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top right,#1e3a8a,#0f172a);
+}
+
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #60a5fa, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3.2rem;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
 }
 
 .hero p {
@@ -129,6 +140,22 @@ h2 {
   margin-bottom: 50px;
   color: #60a5fa;
 }
+section {
+  padding: 120px 0;
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg,#38bdf8,#2563eb);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
 
 /* SERVICES */
 .services-grid {
@@ -138,18 +165,28 @@ h2 {
 }
 
 .service-card {
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
   padding: 30px;
-  border-radius: 15px;
-  transition: 0.4s;
+  border-radius: 18px;
+  transition: all 0.4s ease;
   border: 1px solid rgba(255,255,255,0.05);
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  border: 1px solid #60a5fa;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
 }
-
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+}
 /* CONTACT */
 .contact-wrapper {
   display: grid;
@@ -167,7 +204,11 @@ h2 {
   background: #1e293b;
   color: white;
 }
-
+.contact-info svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
 /* FOOTER */
 .footer {
   background: #020617;
