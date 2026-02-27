@@ -696,6 +696,48 @@ p {
     border-radius: 8px;
 }
 .hero {
-    background: linear-gradient(135deg, #2d6cdf, #4a90e2);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: white;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.08), transparent 60%);
+}
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+.btn-secondary {
+    background: white;
+    color: #0f172a;
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
